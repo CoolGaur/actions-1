@@ -8,12 +8,15 @@ jobs:
         steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
-          
-        - name: welcome message
-          run: echo "My First Github Actions Workflows"
 
-        - name: List files
-          run: ls
+        - name: Piped all the commands together
+          run: |
+            echo "My First Github Actions Workflows"
+            ls -ltra
+            cat README.md
 
-        - name: Read files
-          run: cat README.md
+        # - name: List files
+        #   run: ls
+
+        # - name: Read files
+        #   run: cat README.md
